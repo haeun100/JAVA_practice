@@ -1,32 +1,9 @@
-package ch07;
+package ch08;
 
-public class Cat{
-	
-	String breed;
-	String color;
-	
-	Cat(){
-		System.out.println("Cat() 생성자 호출합니다.");
-	}
-	
-	Cat(String pBreed){
-		System.out.println("Cat(...) 생성자 호출합니다.");
-		breed=pBreed;
-	}
-	
-	Cat(String pBreed, String pColor){
-		System.out.println("Cat(..., ...) 생성자 호출합니다.");
-		breed=pBreed;
-		color=pColor;
-	}
-	
-	void eat() {
-		System.out.println("먹이를 먹다.");
-	}
+public class Cat extends Animal{
+
 	void meow() {
 		System.out.println("야옹하고 울다.");
 	}
-	void scratch() {
-		System.out.println("발톱으로 할퀴다.");
-	}
+	
 }
