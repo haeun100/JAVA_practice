@@ -1,9 +1,13 @@
-package ch08;
+package ch08_2;
 
 public class Dog extends Animal{
 	
-	void bark() {
-		System.out.println("¸Û¸ÛÇÏ°í Â¢´Ù.");
+	Dog(){
+		System.out.println("Dog ¿ÀºêÁ§Æ®°¡ »ý¼ºµÇ¾ú½À´Ï´Ù.");
+	}
+	
+	public void animalSound() {
+		System.out.println("°³´Â ¸Û¸Û¸Û");
 	}
 
 }
