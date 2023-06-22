@@ -1,13 +1,13 @@
-package ch09_1;
+package ch09_2;
+
 public class Example {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		EwhaBike myBike=new EwhaBike();
-		
+
+		Bird myBird=new Bird();
 		System.out.println("---------------------------");
-		
-		EwhaCar myCar=new EwhaCar();
+		Chicken myChicken=new Chicken();
 		
 	}
 }
