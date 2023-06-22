@@ -1,22 +1,17 @@
-import java.io.*;
+
 public class Example01 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		File fileObj=new File("example01.txt");
-		try {
-			boolean success=fileObj.createNewFile();
-			if(success) {
-				System.out.println("파일 생성 성공");
-			}
-			else {
-				System.out.println("파일 생성 실패");
-			}
-		}catch(IOException e) {
-			System.out.println(e);
-		}
 		
+		try {
+			int a=0;
+			int b=5/a;
+		}catch(ArithmeticException e) {
+			System.out.println("0으로 나눕니다.");
+		}
+		System.out.println("try~catch문의 외부 문장입니다.");
+
 	}
 
 }

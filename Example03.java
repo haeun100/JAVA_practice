@@ -1,23 +1,17 @@
-import java.io.File;
-import java.io.FileWriter;
+
 public class Example03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File file=new File("example03.txt");
-		
+		int a[]=new int[2];
 		try {
-			if(!file.exists())
-				file.createNewFile();
-			
-			FileWriter fw=new FileWriter(file);
-			fw.write("Hello!!\n");
-			fw.write("Java Programming\n");
-			fw.close();
-			System.out.println("파일 쓰기 성공");
+			System.out.println("잘못된 요소에 접근: "+a[3]);
 		}catch(Exception e) {
-			System.out.println(e);
+			System.out.println("예외 발생 ArrayIndexOutOfBoundException "+e);
+		}
+		finally {
+			System.out.println("finally는 항상 실행됩니다.");
 		}
 
 	}
