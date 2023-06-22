@@ -1,31 +1,29 @@
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.*;
 public class FileHandling02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File file=new File("gugudan.txt");
-		
+		File file=new File("Ewha_문자스트림.txt");
 		try {
-			if(!file.exists())
-				file.createNewFile();
-			
-			FileOutputStream fos=new FileOutputStream(file);
-			
-			for(int x=2;x<=9;x++) {
-				for(int y=1;y<=9;y++) {
-					String str=x+"X"+y+"="+(x*y)+"\n";
-					byte[] b=str.getBytes();
-					fos.write(b);
-				}
+			if(!file.exists()) {
+				System.out.println("파일 없음");
+				System.exit(0);
 			}
-			fos.close();
-			System.out.println("파일 쓰기 성공");
+			
+			System.out.println("Ewha_문자스트림.txt 파일에서 읽기를 시작합니다.");
+			FileReader fis=new FileReader(file);
+			BufferedReader br=new BufferedReader(fis);
+			
+			String str;
+			while((str=br.readLine())!=null) {
+				System.out.println(str);
+			}
+			fis.close();
 		}catch(Exception e) {
-			e.getMessage();
+			System.out.println(e);
 		}
-		
+
 	}
 
 }
